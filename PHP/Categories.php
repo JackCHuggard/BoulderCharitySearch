@@ -20,5 +20,9 @@
 
 ?>
       </h1>
+      
+      <h1>
+         echo $_GET["category"];
+      </h1>
       </body>
 </html>
