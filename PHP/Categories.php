@@ -1,4 +1,6 @@
 //variable is $_GET["category"]
+<html>
+   <body>
 <?php
    $host        = "host = ec2-23-23-110-26.compute-1.amazonaws.com";
    $port        = "port = 5432";
@@ -16,3 +18,5 @@
    $cat = $_GET["category"]
    echo $cat
 ?>
+      </body>
+</html>
