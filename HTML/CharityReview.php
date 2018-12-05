@@ -37,6 +37,7 @@
   <body>
 
     <!-- Header -->
+    <!-- Header -->
     <div class="header">
       <a href="Home.html"><img src="https://raw.githubusercontent.com/ne3ko/BoulderCharitySearch/master/Logo/BCSLogo1%20(Backgroundless).png" alt="BCS Logo"></a>
     </div>
@@ -53,8 +54,7 @@
     </nav>
     
 <h1>
-<?php
- 
+
 
 <?php
    $host        = "host = ec2-23-23-110-26.compute-1.amazonaws.com";
@@ -63,6 +63,7 @@
    $credentials = "user = crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
+   $query = "SELECT logo from charity WHERE charityid = 1";
    if(!$db) {
       echo "Error : Unable to open database\n";
    } else {
@@ -79,7 +80,7 @@
         <div class = "col-sm-4" >
           <!-- Will have a php command to fetch image url -->
           <!-- this query is mostly a guess so far for how to match to a forms data for the id -->
-          <img src = '<?php echo pg_query($db, "SELECT logo from charity WHERE charityid = 1") ?>' style='margin: 80px;max-height:450px; max-width:450px;'>
+          <img src = '<?php echo pg_query($db, $query) ?>' style='margin: 80px;max-height:450px; max-width:450px;'>
         </div>
 
         <div class = "col-sm-4">
