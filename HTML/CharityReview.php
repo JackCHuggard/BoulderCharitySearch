@@ -104,13 +104,13 @@ else
         <div class = "col-sm-4" >
           <!-- Will have a php command to fetch image url -->
 
-          <!-- <img href = '<?php echo pg_query($db_connection, "SELECT url from charity WHERE charityid = $id") ?>' name = 'link'> -->
+          <!-- <img href = '<?php echo pg_query($db, "SELECT url from charity WHERE charityid = $id") ?>' name = 'link'> -->
           <!-- this query is mostly a guess so far for how to match to a forms data for the id -->
-          <img src = '<?php echo pg_query($db_connection, "SELECT logo from charity WHERE charityid = 1") ?>' style='margin: 80px;max-height:450px; max-width:450px;'>
+          <img src = '<?php echo pg_query($db, "SELECT logo from charity WHERE charityid = 1") ?>' style='margin: 80px;max-height:450px; max-width:450px;'>
         </div>
 
         <div class = "col-sm-4">
-          <h1><?php echo pg_query($db_connection, "SELECT charity_name from charity WHERE charity_id = 1"); ?></h1>
+          <h1><?php echo pg_query($db, "SELECT charity_name from charity WHERE charity_id = 1"); ?></h1>
         </div>
       </div>
     </div>
@@ -121,12 +121,12 @@ else
         <!-- there is no test case -->
         <div class = "col-sm-4">
           
-            <a href = '<?php echo pg_query($db_connection, "SELECT url from charity WHERE charity_id = 1"); ?>'> Link to Charity Webpage </a>
+            <a href = '<?php echo pg_query($db, "SELECT url from charity WHERE charity_id = 1"); ?>'> Link to Charity Webpage </a>
         </div>
 
         <div class = "col-sm-4">
             <!-- there is no test case -->
-            <a href = '<?php echo pg_query($db_connection, "SELECT finance from charity WHERE charityid = 1"); ?>'> Link to Charity IRS Form </a>
+            <a href = '<?php echo pg_query($db, "SELECT finance from charity WHERE charityid = 1"); ?>'> Link to Charity IRS Form </a>
         </div>
 
       </div>
@@ -138,7 +138,7 @@ else
 
     <div>
       <!-- pull from the summary in the table -->     
-            <div><?php echo pg_query($db_connection, "SELECT charity_description from charity WHERE charityid = $id"); ?></div>
+            <div><?php echo pg_query($db, "SELECT charity_description from charity WHERE charityid = $id"); ?></div>
     </div>
 
     <h1 style = "margin-left:20%;">
@@ -146,7 +146,7 @@ else
     </h1>
 
     <div>
-          <div>  <?php echo  pg_query($db_connection, "SELECT charity_tag from charity WHERE charityid = $id"); ?></div>
+          <div>  <?php echo  pg_query($db, "SELECT charity_tag from charity WHERE charityid = $id"); ?></div>
     </div>
 
     <div>
