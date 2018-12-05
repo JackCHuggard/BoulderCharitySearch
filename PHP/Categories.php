@@ -21,7 +21,7 @@
 ?>
       </h1>
       <h1>
-       <?php  echo pg_query(select * from charity; ?>
+       <?php  echo pg_query($db, select * from charity); ?>
       </h1>
       <h1>
          <?php echo $_GET["category"];?>
