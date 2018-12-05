@@ -26,7 +26,7 @@
       </h1>
       
        <h1>
-       <?php  echo pg_query($db, "select * from charity where charity_id = 1"); ?>
+       <?php  echo pg_get_result($db, "select * from charity where charity_id = 1"); ?>
       </h1>
       </body>
 </html>
