@@ -1,4 +1,5 @@
 //variable is $_GET["category"]
+<!doctype html>
 <html>
    <body>
 <?php
